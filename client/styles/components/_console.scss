@@ -88,9 +88,7 @@
 	@include themify() {
 		@extend %link;
 		color: getThemifyVariable('secondary-text-color');
-		&:hover {
-			color: getThemifyVariable('heavy-text-color');
-		}
+	
 	}
 	background: transparent;
 	border: none;
@@ -98,6 +96,17 @@
 	.preview-console--collapsed & {
 		display: none;
 	}
+			  transition: background-color 0.3s ease,
+			  color 0.3s ease,
+			  box-shadow 0.3s ease,
+			  transform 0.3s ease,
+			  border-color 0.3s ease;
+}
+.light .preview-console__clear:hover {
+	background: #ed225d;
+	color: white;
+	border-radius: 2px;
+	transform: scale(1.1) translateY(-2px);
 }
 
 .preview-console__body {
